@@ -8,19 +8,19 @@ Original description: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Reco
 The attached R script (run_analysis.R) performs the following to clean up the data:
 
 * Merges the training and test sets to create one data set
-** train/X_train.txt with test/X_test.txt which results in a 10299x561 data frame, as in the original description ("Number of Instances: 10299" and "Number of Attributes: 561")
-** train/subject_train.txt with test/subject_test.txt which results in a 10299x1 data frame with subject IDs
-** train/y_train.txt with test/y_test.txt which also results in a 10299x1 data frame with activity IDs.
+        * train/X_train.txt with test/X_test.txt which results in a 10299x561 data frame, as in the original description ("Number of Instances: 10299" and "Number of Attributes: 561")
+        * train/subject_train.txt with test/subject_test.txt which results in a 10299x1 data frame with subject IDs
+        * train/y_train.txt with test/y_test.txt which also results in a 10299x1 data frame with activity IDs.
 
 * Reads features.txt and extracts only the measurements on the mean and standard deviation for each measurement. The result is a 10299x79 data frame, because only 79 out of 561 attributes are measurements on the mean and standard deviation.
 
 * Reads activity_labels.txt and applies descriptive activity names to name the activities in the data set:
-** WALKING
-** WALKING_UPSTAIRS
-** WALKING_DOWNSTAIRS
-** SITTING
-** STANDING
-** LAYING
+        * WALKING
+        * WALKING_UPSTAIRS
+        * WALKING_DOWNSTAIRS
+        * SITTING
+        * STANDING
+        * LAYING
 
 * The script also labels the data set with descriptive names: all feature names (attributes) and activity names are converted to camel case. The old and new variable names are described below. Then it merges the 10299x79 data frame containing features with 10299x1 data frames containing activity labels and subject IDs. The result is a 10299x81 data frame such that the first column contains subject IDs, the second column activity names, and the last 79 columns are measurements. Subject IDs are integers between 1 and 30 inclusive. The names of the attributes are similar to the following:
 
