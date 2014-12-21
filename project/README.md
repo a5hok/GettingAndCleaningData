@@ -11,6 +11,4 @@ Course Project
 
 * The output of step 5 of the analysis is a tidy data set - tidy_data_set_with_the_averages.txt
 
-* Use data <- read.table("tidy_data_set_with_the_averages.txt") to read the data. The resulting data frame is 180x68 as there are 30 subjects and 6 activities, thus "for each activity and each subject" means 30 * 6 = 180 rows. 
-
-* Note that the provided R script makes no assumptions on numbers of records, only on locations of files.
+* Use data <- read.table("tidy_data_set_with_the_averages.txt") to read the data. The resulting data frame is 180x81 as there are 30 subjects and 6 activities, thus "for each activity and each subject" means 30 * 6 = 180 rows. 
